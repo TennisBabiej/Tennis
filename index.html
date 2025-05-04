@@ -71,7 +71,15 @@
 
   <script>
     async function fetchChatCompletion(hersteller, modell, baujahr) {
-      const prompt = `Gib mir eine professionelle, kurze Verkaufsbeschreibung für den Tennisschläger "${hersteller} ${modell} ${baujahr}". Die Beschreibung soll beinhalten:
+      const prompt = `Erstelle eine professionelle, kompakte Verkaufsbeschreibung (max. 8 Zeilen) für einen Tennisschläger mit folgenden Angaben:
+
+Modell: ${hersteller} ${modell} (${baujahr})
+
+1. Technische Daten: Gewicht, Balance, Kopfgröße, Länge, Rahmenprofil, RA-Wert, Besaitungsmuster
+2. Spieleigenschaften: Kontrolle, Power, Spin, Komfort
+3. Zielgruppe: Spielertyp (Einsteiger, Fortgeschrittene, Turnierspieler)
+
+Der Stil soll wie ein eBay-Kurztext formuliert sein, mit Fokus auf Verkaufsargumente. Wenn Daten fehlen, mache fundierte Annahmen wie ein erfahrener Tennishändler.`;
 - Technische Daten (Gewicht, Kopfgröße, Besaitungsmuster, Balance, Material, Rahmenprofil, Länge, RA-Wert)
 - Die Spieleigenschaften (Power, Kontrolle, Spin, Komfort)
 - Für welchen Spielertyp der Schläger geeignet ist (z. B. Anfänger, Fortgeschrittene, Turnierspieler)
